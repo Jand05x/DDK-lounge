@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DDK-Rooftop-Menu</title>
+
+    <!-- Bootswatch Darkly Theme -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/darkly/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark fixed-top"
+      style="
+        background-color: rgba(77, 15, 15, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      "
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">DDK Lounge</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+  
+        </button>
+
+        
+          <a href="#reservation" class="btn btn-outline-light">Book Table</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Reservations and Info Section -->
+    <section class="container my-5" style="padding-top: 100px" id="reservation">
+      <div class="row g-4">
+        <!-- Left Column Image + Reservation Form -->
+        <div class="col-md-6">
+          <div class="d-flex align-items-start flex-wrap">
+            <img
+              src="4.jpg"
+              class="img-thumbnail me-3 mb-3"
+              alt="restaurant"
+              style="
+                max-width: 100%;
+                height: auto;
+                flex-shrink: 0;
+                width: 150px;
+                height: 115px;
+              "
+            />
+            <div style="flex: 1 1 200px">
+              <h4 class="mt-1">DDK Rooftop Restaurant</h4>
+
+              <!-- Date / Time / People Inputs -->
+              <div class="row">
+                <div class="col-12 col-md-4 mb-3">
+                  <label for="reservationdate" class="form-label">Date</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="reservationdate"
+                    required
+                  />
+                </div>
+                <div class="col-12 col-md-4 mb-3">
+                  <label for="time" class="form-label">Time</label>
+                  <input type="time" class="form-control" id="time" required />
+                </div>
+                <div class="col-12 col-md-4 mb-3">
+                  <label for="guestCount" class="form-label">People</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="guestCount"
+                    min="1"
+                    max="10"
+                    placeholder="2"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Diner details -->
+          <h6 class="mt-4">Diner Details</h6>
+          <input
+            type="text"
+            placeholder="Phone Number"
+            class="form-control mb-2"
+            style="max-width: 100%"
+            required
+          />
+          <p class="text-danger" style="font-size: 0.7rem">
+            Phone number is required
+          </p>
+          <p style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.7)">
+            You'll receive a text to verify your reservation.
+          </p>
+
+          <!-- Reservation details -->
+          <h6 class="mt-4">Reservation Details</h6>
+          <div class="d-flex gap-3 mb-2 flex-wrap">
+            <input
+              type="text"
+              placeholder="Table 20"
+              class="form-control flex-grow-1 min-w-0"
+            />
+            <input
+              type="text"
+              placeholder="Special request"
+              class="form-control flex-grow-1 min-w-0"
+            />
+          </div>
+          <p style="font-size: 0.7rem; color: rgba(255, 255, 255, 0.7)">
+            Table 1-20 (inside), 21-30 (outside)
+          </p>
+
+          <div class="form-check mt-3">
+            <input class="form-check-input" type="checkbox" id="updates" />
+            <label class="form-check-label" for="updates"
+              >Get updates about your reservation</label
+            >
+          </div>
+
+          <button type="button" class="btn btn-danger mt-4 w-100 w-md-50">
+            Complete
+          </button>
+        </div>
+
+        <!-- Right Column What to Know -->
+        <div class="col-md-6">
+          <h5 class="mb-3">What to Know Before You Go</h5>
+          <div
+            style="
+              font-size: 0.75rem;
+              color: rgba(255, 255, 255, 0.7);
+              line-height: 1.4;
+            "
+          >
+            <p>
+              <strong>Important Dining Information</strong><br />
+              We allow a <strong>15-minute grace period</strong>. Call if you're
+              late.
+            </p>
+            <p>
+              <strong>A Note from Shahan Restaurant</strong><br />
+              Max 6 guests. For large groups, email:
+              <a
+                href="mailto:reservations@shahancompany.com"
+                class="text-decoration-underline text-light"
+                >reservations@shahancompany.com</a
+              >
+            </p>
+            <p>
+              <strong>Weather Notice</strong><br />
+              Outdoor tables are weather permitting. We'll do our best to reseat
+              you inside.
+            </p>
+            <p>
+              <strong>Arrival Policy</strong><br />
+              Table is held 15 minutes past booking. Late arrivals may not be
+              accommodated.
+            </p>
+            <p>
+              <strong>Dress Code</strong><br />
+              Business casual or semi-formal attire required.
+            </p>
+            <p>
+              <strong>Outside Food</strong><br />
+              $10 fee per guest for outside desserts.
+            </p>
+            <a
+              href="index.html"
+              class="btn btn-danger mt-4"
+              style="width: 150px"
+            >
+              &lt; Go Back
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      const navLinks = document.querySelectorAll(".nav-link");
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.forEach((l) => l.classList.remove("active"));
+          link.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
